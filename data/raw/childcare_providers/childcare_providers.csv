@@ -1,0 +1,36 @@
+resource_id,name,street_address,city,state,zip_code,phone,languages,accepts_medicaid,hours,is_synthetic
+CHI-001,Synthetic Childcare Provider 01,7947 Demo Blvd,Mount Rainier,MD,20712,301-555-0188,English;French,true,Mon-Sat 8:00-18:00,true
+CHI-002,Synthetic Childcare Provider 02,8027 Test Ln,Bowie,MD,20720,301-555-0189,English;Spanish;Amharic,false,Tue-Thu 10:00-16:00,true
+CHI-003,Synthetic Childcare Provider 03,3723 Test Ln,Upper Marlboro,MD,20772,301-555-0190,English,true,Mon-Fri 9:00-17:00,true
+CHI-004,Synthetic Childcare Provider 04,5984 Demo Blvd,Bowie,MD,20720,301-555-0191,English;Yoruba,true,Mon-Sat 8:00-18:00,true
+CHI-005,Synthetic Childcare Provider 05,3664 Placeholder St,Hyattsville,MD,20784,301-555-0192,English;Spanish;Amharic,true,Mon-Sat 8:00-18:00,true
+CHI-006,Synthetic Childcare Provider 06,7204 Example Ave,Upper Marlboro,MD,20772,301-555-0193,English;French,true,Mon-Fri 9:00-17:00,true
+CHI-007,Synthetic Childcare Provider 07,2012 Demo Blvd,Bowie,MD,20720,301-555-0194,English;Spanish,false,Mon-Sat 8:00-18:00,true
+CHI-008,Synthetic Childcare Provider 08,6709 Placeholder St,Fort Washington,MD,20744,301-555-0195,English;Spanish,true,Mon-Sat 8:00-18:00,true
+CHI-009,Synthetic Childcare Provider 09,1717 Demo Blvd,Hyattsville,MD,20782,301-555-0196,English;Spanish,true,Sat 9:00-13:00,true
+CHI-010,Synthetic Childcare Provider 10,8913 Demo Blvd,Fort Washington,MD,20744,301-555-0197,English;Spanish,true,Mon-Sat 8:00-18:00,true
+CHI-011,Synthetic Childcare Provider 11,7692 Example Ave,Mount Rainier,MD,20712,301-555-0198,English,true,Tue-Thu 10:00-16:00,true
+CHI-012,Synthetic Childcare Provider 12,1285 Placeholder St,Fort Washington,MD,20744,301-555-0199,English;Yoruba,true,Tue-Thu 10:00-16:00,true
+CHI-013,Synthetic Childcare Provider 13,3137 Fictional Way,Mount Rainier,MD,20712,301-555-0100,English;French,true,Tue-Thu 10:00-16:00,true
+CHI-014,Synthetic Childcare Provider 14,4513 Placeholder St,Mount Rainier,MD,20712,301-555-0101,English;Spanish,true,Mon-Fri 9:00-17:00,true
+CHI-015,Synthetic Childcare Provider 15,929 Fictional Way,Laurel,MD,20707,301-555-0102,English;French,false,Sat 9:00-13:00,true
+CHI-016,Synthetic Childcare Provider 16,2963 Demo Blvd,Bowie,MD,20720,301-555-0103,English,false,Tue-Thu 10:00-16:00,true
+CHI-017,Synthetic Childcare Provider 17,8918 Placeholder St,Lanham,MD,20706,301-555-0104,English;Spanish,true,Tue-Thu 10:00-16:00,true
+CHI-018,Synthetic Childcare Provider 18,7291 Demo Blvd,District Heights,MD,20747,301-555-0105,English;Spanish,false,Mon-Fri 9:00-17:00,true
+CHI-019,Synthetic Childcare Provider 19,1749 Sample Rd,Laurel,MD,20708,301-555-0106,English;French,true,Mon-Fri 9:00-17:00,true
+CHI-020,Synthetic Childcare Provider 20,7732 Placeholder St,Laurel,MD,20708,301-555-0107,English;Spanish,true,Mon-Sat 8:00-18:00,true
+CHI-021,Synthetic Childcare Provider 21,165 Sample Rd,Glenn Dale,MD,20769,301-555-0108,English;Spanish;Amharic,false,Mon-Sat 8:00-18:00,true
+CHI-022,Synthetic Childcare Provider 22,9451 Demo Blvd,Bowie,MD,20721,301-555-0109,English;Yoruba,true,Mon-Fri 9:00-17:00,true
+CHI-023,Synthetic Childcare Provider 23,8165 Demo Blvd,Fort Washington,MD,20744,301-555-0110,English,false,Sat 9:00-13:00,true
+CHI-024,Synthetic Childcare Provider 24,6795 Placeholder St,Mount Rainier,MD,20712,301-555-0111,English,true,Mon-Fri 9:00-17:00,true
+CHI-025,Synthetic Childcare Provider 25,463 Test Ln,Riverdale,MD,20737,301-555-0112,English;Yoruba,true,Tue-Thu 10:00-16:00,true
+CHI-026,Synthetic Childcare Provider 26,4012 Placeholder St,Glenn Dale,MD,20769,301-555-0113,English;French,false,Tue-Thu 10:00-16:00,true
+CHI-027,Synthetic Childcare Provider 27,5381 Sample Rd,Laurel,MD,20707,301-555-0114,English;Yoruba,false,Mon-Sat 8:00-18:00,true
+CHI-028,Synthetic Childcare Provider 28,6209 Demo Blvd,Suitland,MD,20746,301-555-0115,English;Yoruba,true,Mon-Fri 9:00-17:00,true
+CHI-029,Synthetic Childcare Provider 29,5920 Demo Blvd,Capitol Heights,MD,20743,301-555-0116,English;French,true,Tue-Thu 10:00-16:00,true
+CHI-030,Synthetic Childcare Provider 30,3632 Test Ln,Glenn Dale,MD,20769,301-555-0117,English;Spanish,true,Mon-Sat 8:00-18:00,true
+CHI-031,Synthetic Childcare Provider 31,842 Demo Blvd,Upper Marlboro,MD,20772,301-555-0118,English;French,false,Tue-Thu 10:00-16:00,true
+CHI-032,Synthetic Childcare Provider 32,8176 Example Ave,Riverdale,MD,20737,301-555-0119,English,false,Mon-Fri 9:00-17:00,true
+CHI-033,Synthetic Childcare Provider 33,415 Fictional Way,Suitland,MD,20746,301-555-0120,English;Spanish,true,Sat 9:00-13:00,true
+CHI-034,Synthetic Childcare Provider 34,6993 Demo Blvd,Temple Hills,MD,20748,301-555-0121,English;French,true,Mon-Fri 9:00-17:00,true
+CHI-035,Synthetic Childcare Provider 35,1232 Example Ave,Laurel,MD,20708,301-555-0122,English;Spanish,false,Sat 9:00-13:00,true

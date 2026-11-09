@@ -1,0 +1,31 @@
+resource_id,name,street_address,city,state,zip_code,phone,languages,accepts_medicaid,hours,is_synthetic
+FOO-001,Synthetic Food Pantry 01,9790 Fictional Way,Capitol Heights,MD,20743,301-555-0149,English;Spanish;Amharic,true,Mon-Sat 8:00-18:00,true
+FOO-002,Synthetic Food Pantry 02,6623 Fictional Way,College Park,MD,20740,301-555-0150,English;Spanish;Amharic,true,Tue-Thu 10:00-16:00,true
+FOO-003,Synthetic Food Pantry 03,3500 Test Ln,Bowie,MD,20716,301-555-0151,English;Spanish;Amharic,true,Mon-Sat 8:00-18:00,true
+FOO-004,Synthetic Food Pantry 04,211 Demo Blvd,Glenn Dale,MD,20769,301-555-0152,English;Yoruba,true,Mon-Sat 8:00-18:00,true
+FOO-005,Synthetic Food Pantry 05,7512 Demo Blvd,Suitland,MD,20746,301-555-0153,English,true,Mon-Fri 9:00-17:00,true
+FOO-006,Synthetic Food Pantry 06,2170 Fictional Way,Capitol Heights,MD,20743,301-555-0154,English,true,Sat 9:00-13:00,true
+FOO-007,Synthetic Food Pantry 07,4812 Fictional Way,Hyattsville,MD,20784,301-555-0155,English;Spanish;Amharic,false,Sat 9:00-13:00,true
+FOO-008,Synthetic Food Pantry 08,4434 Test Ln,Hyattsville,MD,20781,301-555-0156,English;French,false,Tue-Thu 10:00-16:00,true
+FOO-009,Synthetic Food Pantry 09,2639 Demo Blvd,Beltsville,MD,20705,301-555-0157,English;French,false,Mon-Sat 8:00-18:00,true
+FOO-010,Synthetic Food Pantry 10,1121 Fictional Way,Upper Marlboro,MD,20774,301-555-0158,English;French,false,Mon-Sat 8:00-18:00,true
+FOO-011,Synthetic Food Pantry 11,3410 Placeholder St,Laurel,MD,20707,301-555-0159,English;Spanish;Amharic,false,Tue-Thu 10:00-16:00,true
+FOO-012,Synthetic Food Pantry 12,5111 Fictional Way,Hyattsville,MD,20785,301-555-0160,English;Spanish,false,Sat 9:00-13:00,true
+FOO-013,Synthetic Food Pantry 13,1928 Demo Blvd,Hyattsville,MD,20785,301-555-0161,English;French,true,Tue-Thu 10:00-16:00,true
+FOO-014,Synthetic Food Pantry 14,3423 Placeholder St,Lanham,MD,20706,301-555-0162,English,true,Mon-Fri 9:00-17:00,true
+FOO-015,Synthetic Food Pantry 15,1776 Fictional Way,Bowie,MD,20716,301-555-0163,English;Yoruba,false,Mon-Fri 9:00-17:00,true
+FOO-016,Synthetic Food Pantry 16,1948 Demo Blvd,Capitol Heights,MD,20743,301-555-0164,English;Spanish,true,Mon-Fri 9:00-17:00,true
+FOO-017,Synthetic Food Pantry 17,4514 Demo Blvd,Laurel,MD,20707,301-555-0165,English;French,false,Mon-Fri 9:00-17:00,true
+FOO-018,Synthetic Food Pantry 18,6309 Demo Blvd,Bowie,MD,20715,301-555-0166,English;French,false,Mon-Fri 9:00-17:00,true
+FOO-019,Synthetic Food Pantry 19,7363 Example Ave,Riverdale,MD,20737,301-555-0167,English;Yoruba,true,Sat 9:00-13:00,true
+FOO-020,Synthetic Food Pantry 20,4805 Placeholder St,Hyattsville,MD,20784,301-555-0168,English,true,Mon-Fri 9:00-17:00,true
+FOO-021,Synthetic Food Pantry 21,3264 Placeholder St,Oxon Hill,MD,20745,301-555-0169,English;Yoruba,false,Sat 9:00-13:00,true
+FOO-022,Synthetic Food Pantry 22,7247 Placeholder St,Capitol Heights,MD,20743,301-555-0170,English,false,Sat 9:00-13:00,true
+FOO-023,Synthetic Food Pantry 23,9310 Placeholder St,District Heights,MD,20747,301-555-0171,English;French,true,Tue-Thu 10:00-16:00,true
+FOO-024,Synthetic Food Pantry 24,6911 Sample Rd,District Heights,MD,20747,301-555-0172,English;Spanish;Amharic,false,Sat 9:00-13:00,true
+FOO-025,Synthetic Food Pantry 25,7631 Fictional Way,Bowie,MD,20716,301-555-0173,English;French,false,Mon-Sat 8:00-18:00,true
+FOO-026,Synthetic Food Pantry 26,816 Example Ave,District Heights,MD,20747,301-555-0174,English,true,Sat 9:00-13:00,true
+FOO-027,Synthetic Food Pantry 27,2945 Sample Rd,Hyattsville,MD,20785,301-555-0175,English,false,Mon-Sat 8:00-18:00,true
+FOO-028,Synthetic Food Pantry 28,526 Sample Rd,Upper Marlboro,MD,20774,301-555-0176,English;Spanish;Amharic,false,Tue-Thu 10:00-16:00,true
+FOO-029,Synthetic Food Pantry 29,9430 Sample Rd,Hyattsville,MD,20781,301-555-0177,English;Spanish,true,Mon-Fri 9:00-17:00,true
+FOO-030,Synthetic Food Pantry 30,2329 Fictional Way,Glenn Dale,MD,20769,301-555-0178,English;Yoruba,true,Mon-Fri 9:00-17:00,true

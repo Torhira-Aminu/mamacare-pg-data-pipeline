@@ -1,0 +1,10 @@
+resource_id,name,street_address,city,state,zip_code,phone,languages,accepts_medicaid,hours,is_synthetic
+DIA-001,Synthetic Diaper Bank 01,2559 Placeholder St,Lanham,MD,20706,301-555-0179,English;French,false,Tue-Thu 10:00-16:00,true
+DIA-002,Synthetic Diaper Bank 02,6671 Test Ln,Bowie,MD,20716,301-555-0180,English;Spanish;Amharic,true,Tue-Thu 10:00-16:00,true
+DIA-003,Synthetic Diaper Bank 03,6068 Fictional Way,College Park,MD,20740,301-555-0181,English;French,false,Mon-Sat 8:00-18:00,true
+DIA-004,Synthetic Diaper Bank 04,6881 Demo Blvd,Beltsville,MD,20705,301-555-0182,English;Spanish;Amharic,false,Sat 9:00-13:00,true
+DIA-005,Synthetic Diaper Bank 05,8402 Fictional Way,Lanham,MD,20706,301-555-0183,English;Spanish,true,Tue-Thu 10:00-16:00,true
+DIA-006,Synthetic Diaper Bank 06,6822 Test Ln,Capitol Heights,MD,20743,301-555-0184,English;French,false,Mon-Sat 8:00-18:00,true
+DIA-007,Synthetic Diaper Bank 07,2311 Placeholder St,Hyattsville,MD,20782,301-555-0185,English;French,false,Mon-Fri 9:00-17:00,true
+DIA-008,Synthetic Diaper Bank 08,5067 Test Ln,Fort Washington,MD,20744,301-555-0186,English;Spanish,true,Mon-Fri 9:00-17:00,true
+DIA-009,Synthetic Diaper Bank 09,756 Example Ave,Hyattsville,MD,20784,301-555-0187,English;French,false,Sat 9:00-13:00,true

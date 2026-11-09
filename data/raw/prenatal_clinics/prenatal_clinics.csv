@@ -1,0 +1,23 @@
+resource_id,name,street_address,city,state,zip_code,phone,languages,accepts_medicaid,hours,is_synthetic
+PRE-001,Synthetic Prenatal Clinic 01,1522 Sample Rd,Hyattsville,MD,20783,301-555-0101,English;Spanish,false,Mon-Sat 8:00-18:00,true
+PRE-002,Synthetic Prenatal Clinic 02,7540 Sample Rd,Glenn Dale,MD,20769,301-555-0102,English;French,false,Tue-Thu 10:00-16:00,true
+PRE-003,Synthetic Prenatal Clinic 03,3021 Demo Blvd,Upper Marlboro,MD,20772,301-555-0103,English;Spanish,true,Tue-Thu 10:00-16:00,true
+PRE-004,Synthetic Prenatal Clinic 04,1408 Example Ave,Hyattsville,MD,20785,301-555-0104,English;Spanish,true,Mon-Fri 9:00-17:00,true
+PRE-005,Synthetic Prenatal Clinic 05,4115 Placeholder St,Capitol Heights,MD,20743,301-555-0105,English;Yoruba,true,Sat 9:00-13:00,true
+PRE-006,Synthetic Prenatal Clinic 06,8155 Example Ave,Hyattsville,MD,20781,301-555-0106,English;Spanish;Amharic,true,Mon-Fri 9:00-17:00,true
+PRE-007,Synthetic Prenatal Clinic 07,841 Sample Rd,Bowie,MD,20715,301-555-0107,English,true,Mon-Fri 9:00-17:00,true
+PRE-008,Synthetic Prenatal Clinic 08,1212 Demo Blvd,Capitol Heights,MD,20743,301-555-0108,English,true,Mon-Fri 9:00-17:00,true
+PRE-009,Synthetic Prenatal Clinic 09,7994 Demo Blvd,Bowie,MD,20720,301-555-0109,English;French,false,Mon-Sat 8:00-18:00,true
+PRE-010,Synthetic Prenatal Clinic 10,4225 Placeholder St,Hyattsville,MD,20782,301-555-0110,English;Yoruba,true,Tue-Thu 10:00-16:00,true
+PRE-011,Synthetic Prenatal Clinic 11,2757 Placeholder St,Hyattsville,MD,20785,301-555-0111,English,true,Tue-Thu 10:00-16:00,true
+PRE-012,Synthetic Prenatal Clinic 12,6148 Sample Rd,Bowie,MD,20716,301-555-0112,English;French,false,Sat 9:00-13:00,true
+PRE-013,Synthetic Prenatal Clinic 13,5926 Demo Blvd,Laurel,MD,20708,301-555-0113,English;Spanish;Amharic,true,Sat 9:00-13:00,true
+PRE-014,Synthetic Prenatal Clinic 14,7867 Placeholder St,Laurel,MD,20707,301-555-0114,English;Spanish,true,Sat 9:00-13:00,true
+PRE-015,Synthetic Prenatal Clinic 15,1235 Fictional Way,Hyattsville,MD,20783,301-555-0115,English;French,false,Mon-Sat 8:00-18:00,true
+PRE-016,Synthetic Prenatal Clinic 16,6441 Demo Blvd,Hyattsville,MD,20784,301-555-0116,English;Yoruba,false,Tue-Thu 10:00-16:00,true
+PRE-017,Synthetic Prenatal Clinic 17,8270 Sample Rd,Riverdale,MD,20737,301-555-0117,English;Yoruba,true,Mon-Sat 8:00-18:00,true
+PRE-018,Synthetic Prenatal Clinic 18,4195 Sample Rd,Hyattsville,MD,20785,301-555-0118,English;Spanish;Amharic,false,Sat 9:00-13:00,true
+PRE-019,Synthetic Prenatal Clinic 19,5338 Fictional Way,Beltsville,MD,20705,301-555-0119,English;Spanish;Amharic,false,Sat 9:00-13:00,true
+PRE-020,Synthetic Prenatal Clinic 20,1638 Test Ln,Hyattsville,MD,20784,301-555-0120,English;Spanish;Amharic,false,Mon-Sat 8:00-18:00,true
+PRE-021,Synthetic Prenatal Clinic 21,2183 Sample Rd,Laurel,MD,20707,301-555-0121,English;Yoruba,false,Sat 9:00-13:00,true
+PRE-022,Synthetic Prenatal Clinic 22,6590 Fictional Way,Laurel,MD,20707,301-555-0122,English;Spanish,false,Mon-Fri 9:00-17:00,true

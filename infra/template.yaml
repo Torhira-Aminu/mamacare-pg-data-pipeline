@@ -1,0 +1,160 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >
+  MamaCare PG data-pipeline extension (SYNTHETIC data only): S3 data lake,
+  Glue Data Catalog tables with partition projection, and a cost-capped Athena workgroup.
+
+Parameters:
+  ResultRetentionDays:
+    Type: Number
+    Default: 7
+    Description: Days to keep Athena query result files.
+
+Resources:
+  # One private bucket. raw/ = 8 synthetic resource datasets, reference/ = ZIP list,
+  # athena-results/ = query output (auto-deleted after ResultRetentionDays).
+  DataBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "${AWS::StackName}-data-${AWS::AccountId}"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        IgnorePublicAcls: true
+        BlockPublicPolicy: true
+        RestrictPublicBuckets: true
+      OwnershipControls:
+        Rules:
+          - ObjectOwnership: BucketOwnerEnforced
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      LifecycleConfiguration:
+        Rules:
+          - Id: ExpireAthenaResults
+            Status: Enabled
+            Prefix: athena-results/
+            ExpirationInDays: !Ref ResultRetentionDays
+          - Id: AbortIncompleteUploads
+            Status: Enabled
+            AbortIncompleteMultipartUpload:
+              DaysAfterInitiation: 1
+      Tags:
+        - {Key: project, Value: mamacare-pg}
+        - {Key: data, Value: synthetic-only}
+
+  DataBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref DataBucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: DenyInsecureTransport
+            Effect: Deny
+            Principal: '*'
+            Action: 's3:*'
+            Resource:
+              - !GetAtt DataBucket.Arn
+              - !Sub "${DataBucket.Arn}/*"
+            Condition:
+              Bool:
+                aws:SecureTransport: 'false'
+
+  GlueDatabase:
+    Type: AWS::Glue::Database
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseInput:
+        Name: mamacare_pg_synthetic
+        Description: Synthetic maternal-health resource data for Prince George's County, MD. Not real service data.
+
+  # Partition projection: Athena works out the 8 resource_type partitions from the
+  # template below, so no Glue crawler (billed per run) or MSCK REPAIR is needed.
+  ResourcesTable:
+    Type: AWS::Glue::Table
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseName: !Ref GlueDatabase
+      TableInput:
+        Name: mamacare_resources
+        Description: 8 synthetic resource datasets, one partition per resource_type
+        TableType: EXTERNAL_TABLE
+        Parameters:
+          classification: csv
+          skip.header.line.count: '1'
+          projection.enabled: 'true'
+          projection.resource_type.type: enum
+          projection.resource_type.values: prenatal_clinics,wic_locations,medicaid_resources,food_pantries,diaper_banks,childcare_providers,transportation_assistance,mental_health_services
+          storage.location.template: !Sub "s3://${DataBucket}/raw/${!resource_type}/"
+        PartitionKeys:
+          - {Name: resource_type, Type: string}
+        StorageDescriptor:
+          Location: !Sub "s3://${DataBucket}/raw/"
+          InputFormat: org.apache.hadoop.mapred.TextInputFormat
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          SerdeInfo:
+            SerializationLibrary: org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
+            Parameters: {field.delim: ',', serialization.format: ','}
+          Columns:
+            - {Name: resource_id, Type: string}
+            - {Name: name, Type: string}
+            - {Name: street_address, Type: string}
+            - {Name: city, Type: string}
+            - {Name: state, Type: string}
+            - {Name: zip_code, Type: string}
+            - {Name: phone, Type: string}
+            - {Name: languages, Type: string}
+            - {Name: accepts_medicaid, Type: boolean}
+            - {Name: hours, Type: string}
+            - {Name: is_synthetic, Type: boolean}
+
+  ZipCodesTable:
+    Type: AWS::Glue::Table
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseName: !Ref GlueDatabase
+      TableInput:
+        Name: pg_zip_codes
+        Description: Reference list of real Prince George's County ZIP codes and towns
+        TableType: EXTERNAL_TABLE
+        Parameters:
+          classification: csv
+          skip.header.line.count: '1'
+        StorageDescriptor:
+          Location: !Sub "s3://${DataBucket}/reference/pg_zip_codes/"
+          InputFormat: org.apache.hadoop.mapred.TextInputFormat
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          SerdeInfo:
+            SerializationLibrary: org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
+            Parameters: {field.delim: ',', serialization.format: ','}
+          Columns:
+            - {Name: zip_code, Type: string}
+            - {Name: city, Type: string}
+
+  # Every query run in this workgroup is forced to its settings: results go to the
+  # private bucket, encrypted, and any query scanning over 10 MB is cancelled.
+  AthenaWorkGroup:
+    Type: AWS::Athena::WorkGroup
+    Properties:
+      Name: !Sub "${AWS::StackName}-wg"
+      Description: Cost-capped workgroup for MamaCare PG synthetic-data queries
+      RecursiveDeleteOption: true
+      State: ENABLED
+      WorkGroupConfiguration:
+        EnforceWorkGroupConfiguration: true
+        PublishCloudWatchMetricsEnabled: false
+        BytesScannedCutoffPerQuery: 10485760
+        EngineVersion:
+          SelectedEngineVersion: AUTO
+        ResultConfiguration:
+          OutputLocation: !Sub "s3://${DataBucket}/athena-results/"
+          EncryptionConfiguration:
+            EncryptionOption: SSE_S3
+
+Outputs:
+  DataBucketName:
+    Value: !Ref DataBucket
+  GlueDatabaseName:
+    Value: !Ref GlueDatabase
+  AthenaWorkGroupName:
+    Value: !Ref AthenaWorkGroup

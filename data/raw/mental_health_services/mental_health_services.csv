@@ -1,0 +1,16 @@
+resource_id,name,street_address,city,state,zip_code,phone,languages,accepts_medicaid,hours,is_synthetic
+MEN-001,Synthetic Perinatal Mental Health 01,4332 Example Ave,Oxon Hill,MD,20745,301-555-0131,English;French,false,Mon-Sat 8:00-18:00,true
+MEN-002,Synthetic Perinatal Mental Health 02,6024 Demo Blvd,Greenbelt,MD,20770,301-555-0132,English;Spanish;Amharic,true,Mon-Fri 9:00-17:00,true
+MEN-003,Synthetic Perinatal Mental Health 03,2628 Sample Rd,Greenbelt,MD,20770,301-555-0133,English;Yoruba,false,Sat 9:00-13:00,true
+MEN-004,Synthetic Perinatal Mental Health 04,3762 Placeholder St,Hyattsville,MD,20782,301-555-0134,English,true,Mon-Sat 8:00-18:00,true
+MEN-005,Synthetic Perinatal Mental Health 05,824 Demo Blvd,Temple Hills,MD,20748,301-555-0135,English,false,Mon-Fri 9:00-17:00,true
+MEN-006,Synthetic Perinatal Mental Health 06,6645 Placeholder St,Hyattsville,MD,20782,301-555-0136,English;Yoruba,false,Mon-Sat 8:00-18:00,true
+MEN-007,Synthetic Perinatal Mental Health 07,9648 Test Ln,Beltsville,MD,20705,301-555-0137,English;Yoruba,true,Mon-Sat 8:00-18:00,true
+MEN-008,Synthetic Perinatal Mental Health 08,1122 Fictional Way,Bowie,MD,20720,301-555-0138,English;Yoruba,false,Sat 9:00-13:00,true
+MEN-009,Synthetic Perinatal Mental Health 09,7834 Demo Blvd,Hyattsville,MD,20781,301-555-0139,English;Yoruba,true,Mon-Fri 9:00-17:00,true
+MEN-010,Synthetic Perinatal Mental Health 10,9576 Sample Rd,Hyattsville,MD,20785,301-555-0140,English;Spanish;Amharic,true,Mon-Fri 9:00-17:00,true
+MEN-011,Synthetic Perinatal Mental Health 11,1846 Sample Rd,Greenbelt,MD,20770,301-555-0141,English;Spanish;Amharic,true,Tue-Thu 10:00-16:00,true
+MEN-012,Synthetic Perinatal Mental Health 12,9644 Example Ave,Temple Hills,MD,20748,301-555-0142,English;French,false,Mon-Fri 9:00-17:00,true
+MEN-013,Synthetic Perinatal Mental Health 13,5752 Example Ave,Bowie,MD,20720,301-555-0143,English;Spanish;Amharic,false,Mon-Sat 8:00-18:00,true
+MEN-014,Synthetic Perinatal Mental Health 14,2950 Fictional Way,Capitol Heights,MD,20743,301-555-0144,English;Spanish,false,Mon-Fri 9:00-17:00,true
+MEN-015,Synthetic Perinatal Mental Health 15,6569 Demo Blvd,College Park,MD,20740,301-555-0145,English;Yoruba,true,Tue-Thu 10:00-16:00,true

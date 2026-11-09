@@ -1,0 +1,9 @@
+resource_id,name,street_address,city,state,zip_code,phone,languages,accepts_medicaid,hours,is_synthetic
+TRA-001,Synthetic Ride Assistance 01,1412 Example Ave,College Park,MD,20740,301-555-0123,English;Spanish;Amharic,false,Tue-Thu 10:00-16:00,true
+TRA-002,Synthetic Ride Assistance 02,2927 Demo Blvd,Hyattsville,MD,20783,301-555-0124,English;Spanish,false,Mon-Fri 9:00-17:00,true
+TRA-003,Synthetic Ride Assistance 03,9030 Demo Blvd,Hyattsville,MD,20783,301-555-0125,English;Spanish;Amharic,false,Mon-Sat 8:00-18:00,true
+TRA-004,Synthetic Ride Assistance 04,6411 Fictional Way,Laurel,MD,20707,301-555-0126,English;Spanish;Amharic,false,Mon-Sat 8:00-18:00,true
+TRA-005,Synthetic Ride Assistance 05,2111 Test Ln,Bowie,MD,20720,301-555-0127,English;Yoruba,true,Mon-Sat 8:00-18:00,true
+TRA-006,Synthetic Ride Assistance 06,7907 Placeholder St,Bowie,MD,20716,301-555-0128,English,true,Mon-Sat 8:00-18:00,true
+TRA-007,Synthetic Ride Assistance 07,7932 Sample Rd,Upper Marlboro,MD,20772,301-555-0129,English;Yoruba,true,Mon-Fri 9:00-17:00,true
+TRA-008,Synthetic Ride Assistance 08,3004 Example Ave,College Park,MD,20740,301-555-0130,English;Spanish,false,Sat 9:00-13:00,true

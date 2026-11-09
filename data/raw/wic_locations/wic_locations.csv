@@ -1,0 +1,15 @@
+resource_id,name,street_address,city,state,zip_code,phone,languages,accepts_medicaid,hours,is_synthetic
+WIC-001,Synthetic WIC Site 01,2477 Example Ave,Bladensburg,MD,20710,301-555-0123,English;Spanish;Amharic,true,Mon-Fri 9:00-17:00,true
+WIC-002,Synthetic WIC Site 02,3215 Sample Rd,Laurel,MD,20707,301-555-0124,English;Spanish,false,Mon-Fri 9:00-17:00,true
+WIC-003,Synthetic WIC Site 03,2516 Demo Blvd,Hyattsville,MD,20782,301-555-0125,English;Yoruba,false,Sat 9:00-13:00,true
+WIC-004,Synthetic WIC Site 04,7990 Sample Rd,Hyattsville,MD,20783,301-555-0126,English,false,Mon-Fri 9:00-17:00,true
+WIC-005,Synthetic WIC Site 05,4395 Fictional Way,Hyattsville,MD,20781,301-555-0127,English;French,true,Mon-Fri 9:00-17:00,true
+WIC-006,Synthetic WIC Site 06,8100 Fictional Way,Glenn Dale,MD,20769,301-555-0128,English,false,Sat 9:00-13:00,true
+WIC-007,Synthetic WIC Site 07,9336 Sample Rd,Capitol Heights,MD,20743,301-555-0129,English;Spanish,false,Sat 9:00-13:00,true
+WIC-008,Synthetic WIC Site 08,6357 Fictional Way,Greenbelt,MD,20770,301-555-0130,English;Spanish;Amharic,false,Mon-Fri 9:00-17:00,true
+WIC-009,Synthetic WIC Site 09,3919 Placeholder St,Beltsville,MD,20705,301-555-0131,English;French,true,Mon-Sat 8:00-18:00,true
+WIC-010,Synthetic WIC Site 10,7415 Placeholder St,Hyattsville,MD,20782,301-555-0132,English;Spanish,false,Sat 9:00-13:00,true
+WIC-011,Synthetic WIC Site 11,609 Sample Rd,Temple Hills,MD,20748,301-555-0133,English;Yoruba,true,Mon-Sat 8:00-18:00,true
+WIC-012,Synthetic WIC Site 12,7809 Test Ln,Bowie,MD,20721,301-555-0134,English;Spanish,true,Mon-Fri 9:00-17:00,true
+WIC-013,Synthetic WIC Site 13,4138 Test Ln,Laurel,MD,20708,301-555-0135,English;Spanish,false,Mon-Fri 9:00-17:00,true
+WIC-014,Synthetic WIC Site 14,706 Placeholder St,Glenn Dale,MD,20769,301-555-0136,English,true,Sat 9:00-13:00,true

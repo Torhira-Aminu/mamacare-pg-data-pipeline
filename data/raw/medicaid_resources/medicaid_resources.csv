@@ -1,0 +1,13 @@
+resource_id,name,street_address,city,state,zip_code,phone,languages,accepts_medicaid,hours,is_synthetic
+MED-001,Synthetic Medicaid Enrollment Help 01,3850 Fictional Way,Lanham,MD,20706,301-555-0137,English,true,Tue-Thu 10:00-16:00,true
+MED-002,Synthetic Medicaid Enrollment Help 02,461 Sample Rd,Riverdale,MD,20737,301-555-0138,English;Spanish,true,Sat 9:00-13:00,true
+MED-003,Synthetic Medicaid Enrollment Help 03,7922 Placeholder St,Glenn Dale,MD,20769,301-555-0139,English;Spanish;Amharic,true,Mon-Sat 8:00-18:00,true
+MED-004,Synthetic Medicaid Enrollment Help 04,5488 Fictional Way,Hyattsville,MD,20782,301-555-0140,English;Spanish;Amharic,true,Mon-Fri 9:00-17:00,true
+MED-005,Synthetic Medicaid Enrollment Help 05,6578 Fictional Way,Hyattsville,MD,20782,301-555-0141,English;Yoruba,true,Mon-Sat 8:00-18:00,true
+MED-006,Synthetic Medicaid Enrollment Help 06,3383 Fictional Way,Greenbelt,MD,20770,301-555-0142,English;French,true,Sat 9:00-13:00,true
+MED-007,Synthetic Medicaid Enrollment Help 07,8964 Placeholder St,Riverdale,MD,20737,301-555-0143,English,true,Tue-Thu 10:00-16:00,true
+MED-008,Synthetic Medicaid Enrollment Help 08,3522 Demo Blvd,Bladensburg,MD,20710,301-555-0144,English;French,true,Mon-Sat 8:00-18:00,true
+MED-009,Synthetic Medicaid Enrollment Help 09,1613 Demo Blvd,Bowie,MD,20716,301-555-0145,English;Spanish,true,Mon-Fri 9:00-17:00,true
+MED-010,Synthetic Medicaid Enrollment Help 10,6044 Demo Blvd,District Heights,MD,20747,301-555-0146,English;French,true,Mon-Fri 9:00-17:00,true
+MED-011,Synthetic Medicaid Enrollment Help 11,6577 Test Ln,Mount Rainier,MD,20712,301-555-0147,English;Yoruba,true,Tue-Thu 10:00-16:00,true
+MED-012,Synthetic Medicaid Enrollment Help 12,8268 Demo Blvd,Laurel,MD,20708,301-555-0148,English;Yoruba,true,Mon-Sat 8:00-18:00,true
