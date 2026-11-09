@@ -16,7 +16,8 @@ flowchart LR
     GC --> A[Athena workgroup<br/>10 MB per-query scan cap]
     A -->|SQL| Q[Counts by ZIP and type<br/>ZIP summary · types with no records]
     A --> R[(S3 athena-results/<br/>expires after 7 days)]
-    Q -.planned: export small JSON.-> APP[MamaCare PG web app<br/>team-owned code, unchanged]
+    Q -->|export_app_data.py| J[zip_summary.js<br/>static data file]
+    J --> W[zip-coverage.js add-on card] --> APP[MamaCare PG web app<br/>team-owned code]
     CFN[CloudFormation stack mamacare-pg] -.creates.-> S3 & GC & A
 ```
 
@@ -31,6 +32,8 @@ flowchart LR
 | `infra/template.yaml` | CloudFormation: S3 bucket + policy, Glue database + 2 tables, Athena workgroup |
 | `tests/test_pipeline.py` | 9 tests: determinism, synthetic labeling, fictional phones, valid PG ZIPs, schema, query consistency |
 | `docs/evidence/athena_results_2026-11-09.json` | Real Athena output with bytes scanned and engine time |
+| `scripts/export_app_data.py` | Turns the verified Athena ZIP summary into `app-integration/zip_summary.js` |
+| `app-integration/zip-coverage.js` | Add-on that shows a "Resources in your ZIP" card in the app (7 Node tests) |
 
 ## The eight resource types
 
@@ -45,6 +48,20 @@ Prenatal clinics (22 records), WIC locations (14), Medicaid resources (12), food
 | Resource types with no records per ZIP | 27 | 20,414 bytes | 765 ms | ✅ every row |
 
 Example (synthetic): ZIP 20743 (Capitol Heights) has the most records (10); 20774 (Upper Marlboro) has records for only 1 of 8 types. These are artifacts of the random generator, shown only to demonstrate the queries. Times are single runs, not benchmarks.
+
+## Connecting to the MamaCare PG app
+
+The app is a static HTML/JavaScript site that already asks for the user's ZIP code. The add-on uses that ZIP to show the pipeline's counts on the dashboard:
+
+![ZIP coverage card rendered in the app](docs/screenshots/zip-coverage-card.png)
+
+Integration is 6 added lines in the app (nothing removed): two `<script>` tags, one `<div id="zipCoverage">`, and one call, `MamaCareZipCoverage.render(userData.zip)`, at the end of `showDashboard()`. It was tested by loading the team's page in headless Chrome: no JavaScript errors, and the card's numbers matched the Athena output. **The team's app code is not published in this repo;** the change will be proposed to the team separately.
+
+How it behaves:
+- Every card carries a "Synthetic demo data" label and a notice.
+- ZIPs outside the dataset get a referral to 2-1-1 instead of an error; malformed ZIPs prompt for 5 digits.
+- User input is HTML-escaped (tested against an injection string).
+- The data ships as a `.js` file rather than `.json` because browsers block `fetch()` of local files when a page is opened straight from disk.
 
 ## Design decisions and trade-offs
 
@@ -76,6 +93,8 @@ pip install pytest
 python scripts/generate_synthetic_data.py
 python scripts/run_local.py
 python -m pytest -v
+node --test app-integration/zip-coverage.test.js
+python scripts/export_app_data.py
 aws cloudformation deploy --template-file infra/template.yaml --stack-name mamacare-pg --region us-east-1 --profile portfolio
 aws s3 sync data s3://mamacare-pg-data-<ACCOUNT_ID>/ --exclude "expected/*" --profile portfolio
 ```
