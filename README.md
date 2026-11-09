@@ -55,7 +55,7 @@ The app is a static HTML/JavaScript site that already asks for the user's ZIP co
 
 ![ZIP coverage card rendered in the app](docs/screenshots/zip-coverage-card.png)
 
-Integration is 6 added lines in the app (nothing removed): two `<script>` tags, one `<div id="zipCoverage">`, and one call, `MamaCareZipCoverage.render(userData.zip)`, at the end of `showDashboard()`. It was tested by loading the team's page in headless Chrome: no JavaScript errors, and the card's numbers matched the Athena output. **The team's app code is not published in this repo;** the change will be proposed to the team separately.
+Integration is 6 added lines in the app (nothing removed): two `<script>` tags, one `<div id="zipCoverage">`, and one call, `MamaCareZipCoverage.render(userData.zip)`, at the end of `showDashboard()`. It was tested by loading the team's page in headless Chrome: no JavaScript errors, and the card's numbers matched the Athena output. **The team's app code is not published in this repo;** the integration lives in the [MamaCare PG app repository](https://github.com/Torhira-Aminu/MamabridgePG).
 
 How it behaves:
 - Every card carries a "Synthetic demo data" label and a notice.
@@ -95,14 +95,14 @@ python scripts/run_local.py
 python -m pytest -v
 node --test app-integration/zip-coverage.test.js
 python scripts/export_app_data.py
-aws cloudformation deploy --template-file infra/template.yaml --stack-name mamacare-pg --region us-east-1 --profile portfolio
-aws s3 sync data s3://mamacare-pg-data-<ACCOUNT_ID>/ --exclude "expected/*" --profile portfolio
+aws cloudformation deploy --template-file infra/template.yaml --stack-name mamacare-pg --region us-east-1 --profile <your-profile>
+aws s3 sync data s3://mamacare-pg-data-<ACCOUNT_ID>/ --exclude "expected/*" --profile <your-profile>
 ```
 
 Then in the Athena console choose workgroup **mamacare-pg-wg**, database **mamacare_pg_synthetic**, and run any file in `sql/`.
 
-Tear down: `aws s3 rm s3://mamacare-pg-data-<ACCOUNT_ID> --recursive --profile portfolio`, then `aws cloudformation delete-stack --stack-name mamacare-pg --profile portfolio`.
+Tear down: `aws s3 rm s3://mamacare-pg-data-<ACCOUNT_ID> --recursive --profile <your-profile>`, then `aws cloudformation delete-stack --stack-name mamacare-pg --profile <your-profile>`.
 
 ## Credits
 
-**MamaCare PG** web application (HTML/CSS/JavaScript) was built by the MamaCare PG team. This repository is **Torhira Aminu's individual extension**: the synthetic datasets, AWS data pipeline, queries, tests and documentation. It does not modify the team's application code. Built with assistance from Claude.
+**MamaCare PG** web application (HTML/CSS/JavaScript) was built by the MamaCare PG team. This repository is **Torhira Aminu's individual extension**: the synthetic datasets, AWS data pipeline, queries, tests and documentation. It does not modify the team's application code.

@@ -33,7 +33,7 @@ def build():
         }
     return {
         "synthetic": True,
-        "notice": "Synthetic demo data generated for a portfolio project. Not real service availability.",
+        "notice": "Synthetic demo data for illustration only. Not real service availability.",
         "source": f"Amazon Athena query sql/02_zip_summary.sql, captured {ev['captured_at_utc']}",
         "type_labels": TYPE_LABELS,
         "zips": zips,
