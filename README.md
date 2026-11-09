@@ -86,4 +86,4 @@ Tear down: `aws s3 rm s3://mamacare-pg-data-<ACCOUNT_ID> --recursive --profile p
 
 ## Credits
 
-**MamaCare PG** web application (HTML/CSS/JavaScript) was built by the MamaCare PG team: *[add teammate names and roles]*. This repository is **Torhira Aminu's individual extension**: the synthetic datasets, AWS data pipeline, queries, tests and documentation. It does not modify the team's application code. Built with assistance from Claude.
+**MamaCare PG** web application (HTML/CSS/JavaScript) was built by the MamaCare PG team. This repository is **Torhira Aminu's individual extension**: the synthetic datasets, AWS data pipeline, queries, tests and documentation. It does not modify the team's application code. Built with assistance from Claude.
